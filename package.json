@@ -5,9 +5,13 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "sanitize.css": "^5.0.0",
+    "swiper": "^3.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prop-types": "^15.5.10"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
