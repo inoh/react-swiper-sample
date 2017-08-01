@@ -6,7 +6,7 @@ import './App.css';
 import Swiper from 'swiper/dist/js/swiper.min';
 
 import Pagination from '../components/Pagination';
-import Slide from '../components/Slide';
+import Pages from '../components/Pages';
 
 class App extends Component {
   static options = {
@@ -21,22 +21,8 @@ class App extends Component {
     spaceBetween: 30,
     keyboardControl: true,
     paginationType: 'fraction',
+    // effect: 'flip', // fade, flip, cube, coverflow
   };
-
-  static data = [
-    {
-      id: 1,
-      value: 'slide1',
-    },
-    {
-      id: 2,
-      value: 'slide2',
-    },
-    {
-      id: 3,
-      value: 'slide3',
-    },
-  ];
 
   componentDidMount() {
     new Swiper(this.refs.swiperContainer, App.options);
@@ -45,9 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="swiper-container" ref="swiperContainer">
-        <div className="swiper-wrapper">
-          {App.data.map(slide => <Slide key={slide.id}>{slide.value}</Slide>)}
-        </div>
+        <Pages />
 
         <Pagination />
       </div>
