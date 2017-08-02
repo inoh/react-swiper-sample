@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './index.css';
+
 const Slide = ({ children }) => (
-  <div className="swiper-slide">{children}</div>
+  <div className="swiper-slide">
+    <div className="slide">{children}</div>
+  </div>
 );
 
-Slide.defaultProps = {
-  children: null,
-};
-
 Slide.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default Slide;
