@@ -1,15 +1,25 @@
 import React from 'react';
 
+import Slide from '../Slide';
 import Cover from '../Cover';
 import Syntax from '../Syntax';
-
-import P1 from './P1';
+import List, { Item } from '../List';
 
 const Pages = () => (
   <div className="swiper-wrapper">
     <Cover>React</Cover>
-    <P1 />
+    <Slide>
+      <List title="ポジティブ">
+        <Item>モダンでカッコイイ</Item>
+        <Item>早いらしい</Item>
+      </List>
+      <List title="ネガティブ">
+        <Item>jsxがきもい</Item>
+        <Item>環境作るのが難しい</Item>
+      </List>
+    </Slide>
     <Cover>jsxがきもい</Cover>
+    <Cover>Web Components</Cover>
     <Cover>環境作るのが難しい</Cover>
     <Syntax>{`  "scripts": {
 +    "build-css": "node-sass-chokidar src/ -o src/",
