@@ -21,7 +21,7 @@ class App extends Component {
     spaceBetween: 30,
     keyboardControl: true,
     paginationType: 'fraction',
-    // effect: 'flip', // fade, flip, cube, coverflow
+    effect: 'cube', // fade, flip, cube, coverflow
   };
 
   componentDidMount() {
