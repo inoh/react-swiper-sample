@@ -4,6 +4,7 @@ import Slide from '../Slide';
 import Cover from '../Cover';
 import Syntax from '../Syntax';
 import List, { Item } from '../List';
+import Hello from './Hello';
 
 const Pages = () => (
   <div className="swiper-wrapper">
@@ -27,16 +28,54 @@ const Pages = () => (
     </Slide>
 
     <Slide>
-      <p>javascript with html</p>
+      <p>sample</p>
+      <Hello />
+    </Slide>
+
+    <Slide>
+      <p>React</p>
       <Syntax>{`class Hello extends Component {
       onClick = () => {
           alert('hello');
       }
 
       render() {
-           return <div onClick={this.onClick}>Hello World!!</div>
+           return <button onClick={this.onClick}>Hello World!!</button>
       }
   }`}</Syntax>
+      <p>javascript with html</p>
+    </Slide>
+
+    <Slide>
+      <p>Riot.js</p>
+      <Syntax lang="html">{`<hello>
+  <button onClick={ onClick }>Hello World!!</button>
+
+  <script>
+    onClick() { alert('hello'); }
+  </script>
+</hello>`}</Syntax>
+    </Slide>
+
+    <Slide>
+      <p>Vue.js</p>
+      <Syntax lang="html">{`<div id="app">
+  <button @click="onClick">Hello World!!</button>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      onClick: function () { alert('hello'); }
+    }
+  })
+</script>`}</Syntax>
+    </Slide>
+
+    <Slide>
+      <p>Power of `ES6 + React`</p>
+      <Syntax>{`const Hello = () => <button onClick={() => alert('hello')}>Hello World!!</button>`}</Syntax>
     </Slide>
 
     <Slide>

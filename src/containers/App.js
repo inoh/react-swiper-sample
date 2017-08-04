@@ -10,6 +10,7 @@ import Pages from '../components/Pages';
 
 class App extends Component {
   static options = {
+    speed: 1000,
     // direction: 'vertical',
     // loop: true,
     pagination: '.swiper-pagination',
